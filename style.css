@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 420px;
+    height: 420px;
+    border: 2px solid black;
+}
+
+.grid div {
+    height: 15px;
+    width: 15px;
+    border: 1px solid pink;
+}
