@@ -1,5 +1,6 @@
-* {
-    box-sizing: border-box;
+html, body {
+    margin: 10;
+    padding: 10;
 }
 
 .grid {
@@ -7,11 +8,19 @@
     flex-wrap: wrap;
     width: 420px;
     height: 420px;
-    border: 2px solid black;
+    border: solid black;
 }
 
 .grid div {
-    height: 15px;
     width: 15px;
-    border: 1px solid pink;
+    height: 15px;
+}
+
+.wall {
+    background-color: blue;
+}
+
+.pacman {
+    background-color: yellow;
+    border-radius: 50%;
 }
