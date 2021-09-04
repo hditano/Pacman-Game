@@ -24,3 +24,7 @@ html, body {
     background-color: yellow;
     border-radius: 50%;
 }
+
+.ghost-lair {
+    background-color: red;
+}

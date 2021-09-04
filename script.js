@@ -42,6 +42,8 @@ function createGrid() {
 
         if (layout[i] === 1) {
             squares[i].classList.add('wall');
+        } else if (layout[i] === 2) {
+            squares[i].classList.add('ghost-lair');
         }
 
     }
@@ -58,18 +60,18 @@ function control(e) {
     switch (e.key) {
         case 'ArrowLeft':
             console.log('Arrow Left');
-            if (!squares[currentPacmanIndex - 1].classList.contains('wall') && currentPacmanIndex % width !== 0) currentPacmanIndex -= 1;
+            if (!squares[currentPacmanIndex - 1].classList.contains('ghost-lair') && !squares[currentPacmanIndex - 1].classList.contains('wall') && currentPacmanIndex % width !== 0) currentPacmanIndex -= 1;
             break;
         case 'ArrowRight':
             console.log('Arrow Right');
-            if (!squares[currentPacmanIndex + 1].classList.contains('wall') && currentPacmanIndex % width < width - 1) currentPacmanIndex += 1;
+            if (!squares[currentPacmanIndex + 1].classList.contains('ghost-lair') && !squares[currentPacmanIndex + 1].classList.contains('wall') && currentPacmanIndex % width < width - 1) currentPacmanIndex += 1;
             break;
         case 'ArrowDown':
             console.log('Arrow Down');
-            if (!squares[currentPacmanIndex + width].classList.contains('wall') && currentPacmanIndex + width < width * width) currentPacmanIndex = currentPacmanIndex += width;
+            if (!squares[currentPacmanIndex + width].classList.contains('ghost-lair') && !squares[currentPacmanIndex + width].classList.contains('wall') && currentPacmanIndex + width < width * width) currentPacmanIndex = currentPacmanIndex += width;
             break;
         case 'ArrowUp':
-            if (!squares[currentPacmanIndex - width].classList.contains('wall') && currentPacmanIndex - width >= 0) currentPacmanIndex -= width;
+            if (!squares[currentPacmanIndex - width].classList.contains('ghost-lair') && !squares[currentPacmanIndex - width].classList.contains('wall') && currentPacmanIndex - width >= 0) currentPacmanIndex -= width;
             console.log('Arrow Up');
             break;
     }
