@@ -26,5 +26,15 @@ html, body {
 }
 
 .ghost-lair {
-    background-color: red;
+    
+}
+
+.ghosts {
+    background-color: magenta;
+}
+
+.pac-dots {
+    background-color: green;
+    border: 5px solid white;
+    box-sizing: border-box;
 }
